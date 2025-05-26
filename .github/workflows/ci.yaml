@@ -36,4 +36,4 @@ jobs:
 
       #to make sure that the image is stable and can be deployed
       - name: Build Docker image (optional)
-        run: docker build -t image-moderation-api .
+        run: docker build -t image-moderation-api backend/.
