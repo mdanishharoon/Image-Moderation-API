@@ -3,7 +3,8 @@
 A production-ready FastAPI-based service for automated image moderation (based on azure content safety API resource),  and MongoDB Atlas. Includes a minimal frontend for easy testing and demonstration.
 
 ---
-![image](https://github.com/user-attachments/assets/dab75d19-fa2c-4489-8533-a8883ba6c61b)
+![image](https://github.com/user-attachments/assets/84ecc0a5-9dc8-4d0f-b956-d10f77668946)
+
 
 ### Confidence Scores
 - 100% -> 100% confident it's safe
