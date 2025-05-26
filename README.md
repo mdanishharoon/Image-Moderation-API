@@ -76,7 +76,7 @@ docker-compose up --build
 ## Development & Local Testing
 - You can run the backend locally with `uvicorn main:app --reload --port 7000`
 - Serve the frontend with any static server (e.g., `python3 -m http.server 8000` in the `frontend` folder)
-- All dependencies are listed in `requirements.txt` (including `motor` for async MongoDB)
+- All dependencies are listed in `requirements.txt`
 
 ---
 
