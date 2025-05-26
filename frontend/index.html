@@ -10,25 +10,65 @@
     <div class="container">
         <h1>Image Moderation API</h1>
         
-        <div class="auth-section">
-            <h2>Authentication</h2>
-            <div class="token-input">
-                <input type="text" id="tokenInput" placeholder="Enter your token">
-                <button onclick="setToken()">Set Token</button>
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab('moderation')">Image Moderation</button>
+            <button class="tab-btn" onclick="switchTab('admin')">Admin Panel</button>
+        </div>
+
+        <!-- Image Moderation Tab -->
+        <div id="moderation-tab" class="tab-content active">
+            <div class="auth-section">
+                <h2>Authentication</h2>
+                <div class="token-input">
+                    <input type="text" id="tokenInput" placeholder="Enter your token">
+                    <button onclick="setToken()">Set Token</button>
+                </div>
+                <div id="tokenStatus"></div>
             </div>
-            <div id="tokenStatus"></div>
+
+            <div class="upload-section">
+                <h2>Upload Image</h2>
+                <input type="file" id="imageInput" accept="image/*">
+                <button onclick="uploadImage()">Moderate Image</button>
+            </div>
+
+            <div class="result-section">
+                <h2>Moderation Result</h2>
+                <div id="imagePreview"></div>
+                <div id="result"></div>
+            </div>
         </div>
 
-        <div class="upload-section">
-            <h2>Upload Image</h2>
-            <input type="file" id="imageInput" accept="image/*">
-            <button onclick="uploadImage()">Moderate Image</button>
-        </div>
+        <!-- Admin Panel Tab -->
+        <div id="admin-tab" class="tab-content">
+            <div class="admin-auth-section">
+                <h2>Admin Authentication</h2>
+                <div class="token-input">
+                    <input type="password" id="adminTokenInput" placeholder="Enter admin token">
+                    <button onclick="authenticateAdmin()">Authenticate</button>
+                </div>
+                <div id="adminAuthStatus"></div>
+            </div>
 
-        <div class="result-section">
-            <h2>Moderation Result</h2>
-            <div id="imagePreview"></div>
-            <div id="result"></div>
+            <div id="adminControls" class="admin-controls" style="display: none;">
+                <div class="create-token-section">
+                    <h2>Create New Token</h2>
+                    <div class="token-creation">
+                        <label>
+                            <input type="checkbox" id="isAdminToken"> Admin Token
+                        </label>
+                        <button onclick="createToken()">Create Token</button>
+                    </div>
+                    <div id="createTokenResult"></div>
+                </div>
+
+                <div class="token-list-section">
+                    <h2>Existing Tokens</h2>
+                    <button onclick="loadTokens()">Refresh Token List</button>
+                    <div id="tokenList"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
