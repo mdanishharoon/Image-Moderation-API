@@ -55,10 +55,13 @@ docker-compose up --build
 
 ## API Endpoints
 
-### Authentication (Admin Only)
-- `POST /auth/tokens` — Create a new token (admin or user)
+### Authentication (Admin Only*)
+- `POST /auth/tokens` — Create a new token 
 - `GET /auth/tokens` — List all tokens
 - `DELETE /auth/tokens/{token}` — Delete a token
+
+#### Note*
+- admin token is created when application starts and is used to access admin endpoints
 
 ### Moderation
 - `POST /moderate` — Upload and analyze an image (requires any valid token)
