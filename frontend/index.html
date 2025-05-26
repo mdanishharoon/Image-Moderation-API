@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Moderation API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Moderation API</h1>
+        
+        <div class="auth-section">
+            <h2>Authentication</h2>
+            <div class="token-input">
+                <input type="text" id="tokenInput" placeholder="Enter your token">
+                <button onclick="setToken()">Set Token</button>
+            </div>
+            <div id="tokenStatus"></div>
+        </div>
+
+        <div class="upload-section">
+            <h2>Upload Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="uploadImage()">Moderate Image</button>
+        </div>
+
+        <div class="result-section">
+            <h2>Moderation Result</h2>
+            <div id="imagePreview"></div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
