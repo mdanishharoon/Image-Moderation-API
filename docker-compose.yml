@@ -2,13 +2,15 @@ version: '3.8'
 
 services:
   backend:
-    build: .
+    build: ./backend
     ports:
       - "7000:7000"
     environment:
       - MONGODB_URL=${MONGODB_URL}
+      - CONTENT_SAFETY_ENDPOINT=${CONTENT_SAFETY_ENDPOINT}
+      - CONTENT_SAFETY_KEY=${CONTENT_SAFETY_KEY}
     volumes:
-      - .:/app
+      - ./backend:/app
     command: uvicorn main:app --host 0.0.0.0 --port 7000 --reload
 
   frontend:
