@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+.env.*
+*.db
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.log
+
+# Python virtual environments
+venv/
+env/
+.venv/
+ENV/
+
