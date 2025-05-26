@@ -5,6 +5,12 @@ A production-ready FastAPI-based service for automated image moderation (based o
 ---
 ![image](https://github.com/user-attachments/assets/dab75d19-fa2c-4489-8533-a8883ba6c61b)
 
+### Confidence Scores
+- 100% -> 100% confident it's safe
+- 0% - > 0% confident it's safe (most severe) 
+
+---
+
 ## Features
 
 - **RESTful API** for image moderation with detailed safety reports
