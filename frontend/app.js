@@ -1,4 +1,4 @@
-const API_URL = 'https://image-moderation-api.onrender.com' | 'http://localhost:7000';
+const API_URL = 'https://image-moderation-api.onrender.com';
 let currentToken = localStorage.getItem('token');
 let adminToken = null;
 
